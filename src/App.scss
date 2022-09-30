@@ -78,6 +78,7 @@ body {
         padding-left: 1em;
         background-color: #beac946b;
         align-self: stretch;
+
         .link-sidebar {
             padding-top: 2em;
 
@@ -105,9 +106,7 @@ body {
 
 // Tabla productos
 .tablaproductos {
-    padding: 1em;
-    border: 1px solid $gris-oscuro;
-    width: 100%;
+
     margin: auto;
     margin-top: 2em;
     background-color: $blanco;
@@ -118,12 +117,24 @@ body {
             background-color: $beige;
         }
 
-        td {
-            padding: 1em;
+        td{
+            padding-top: 1em;
+            padding-bottom: 1em;
             background-color: $gris;
         }
     }
 
+    @media (min-width: 480px) {
+        width: 80%;
+        padding: 1em;
+        border: 1px solid $gris-oscuro;
+
+        tr{
+            td{
+                    padding: 1em;
+            }
+        }
+    }
 }
 
 // Small card
