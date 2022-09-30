@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+
+$roboto: 'Roboto', 'sans-serif';
+
+/* Colors */
+$gris: #F2F2F2;
+$gris-oscuro: rgb(102, 102, 102);
+$verde-claro: #86A614;
+$blanco: #fff;
+$negro: #000;
+$verde-oscuro: #567317;
+$beige: #BEAC94;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: $roboto;
+    background-color: $gris;
+}
+
+
+// Top Bar
+
+.div-topbar {
+    display: flex;
+    justify-content: flex-start;
+    background-color: $blanco;
+    padding: 1em;
+    align-items: center;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+
+    img {
+        width: 80px;
+    }
+
+    h1 {
+        margin-left: .5em;
+        font-weight: 300;
+    }
+}
+
+// Side bar
+
+.div-sidebar {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px $gris solid;
+    background-color: $blanco;
+    padding-bottom: 1em;
+
+    .strong {
+        font-weight: 900;
+    }
+
+    .link-sidebar {
+        span {
+            color: $gris-oscuro;
+        }
+
+        padding-top: 1em;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 18px;
+        max-width: 200px;
+        width: 25%;
+        min-height: 100vh;
+        border-top: none;
+        align-items: flex-start;
+        padding-left: 1em;
+        background-color: #beac946b;
+        align-self: stretch;
+        .link-sidebar {
+            padding-top: 2em;
+
+            span {
+                transition: all 300ms;
+            }
+
+            span:hover {
+                color: $negro;
+
+                i {
+                    transform: scale(1.3);
+                }
+            }
+        }
+    }
+}
+
+// Content
+
+.content-div {
+    padding: 2em;
+    width: 100%;
+}
+
+// Tabla productos
+.tablaproductos {
+    padding: 1em;
+    border: 1px solid $gris-oscuro;
+    width: 100%;
+    margin: auto;
+    margin-top: 2em;
+    background-color: $blanco;
+    text-align: center;
+
+    tr {
+        th {
+            background-color: $beige;
+        }
+
+        td {
+            padding: 1em;
+            background-color: $gris;
+        }
+    }
+
+}
+
+// Small card
+
+.smallcard-div {
+    max-width: 400px;
+    background-color: $blanco;
+    padding: 2em;
+    border-radius: 20px;
+    box-shadow: 20px 20px 27px #d9d9d9,
+        -20px -20px 27px #e7e7e7;
+    margin: auto;
+    border-right: $verde-claro 20px solid;
+
+    h4 {
+        font-weight: 700;
+        font-size: 25px;
+        margin-bottom: 1em;
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 30px;
+    }
+
+
+    @media (min-width: 768px) {
+        max-width: 300px;
+
+        h4 {
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 0.6em;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 25px;
+        }
+    }
+}
+
+// Last producto/usuario
+
+.div-last {
+    background-color: $blanco;
+    padding: 2em;
+    border-radius: 20px;
+    box-shadow: 20px 20px 27px #d9d9d9,
+        -20px -20px 27px #e7e7e7;
+    margin: auto;
+    margin-top: 4em;
+    max-width: 500px;
+
+    img {
+        width: 80%;
+        text-align: center;
+        margin: auto;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 25px;
+        margin-bottom: 1em;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 20px;
+        margin-bottom: 0.5em;
+    }
+}
+
+// Flex content
+
+@media (min-width: 768px) {
+
+    .flexcontent {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+
+    div.divflexproductos {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+
+        div {
+            max-width: 50%;
+        }
+    }
+}
