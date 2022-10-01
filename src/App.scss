@@ -137,6 +137,43 @@ body {
     }
 }
 
+// Tabla usuarios
+.tablausuarios {
+    margin: auto;
+    margin-top: 2em;
+    background-color: $blanco;
+    text-align: center;
+
+    tr {
+        th {
+            background-color: $beige;
+        }
+
+        td{
+            padding: 1em 0 1em 0;
+            background-color: $gris;
+        }
+        .emailtd{
+            font-size: 10px;
+        }
+    }
+
+    @media (min-width: 540px) {
+        width: 80%;
+        padding: 1em;
+        border: 1px solid $gris-oscuro;
+
+        tr{
+            td{
+                    padding: 1em;
+            }
+            .emailtd{
+                font-size:initial;
+            }
+        }
+    }
+}
+
 // Small card
 
 .smallcard-div {
@@ -147,7 +184,7 @@ body {
     box-shadow: 20px 20px 27px #d9d9d9,
         -20px -20px 27px #e7e7e7;
     margin: auto;
-    border-right: $verde-claro 20px solid;
+    margin-top: 2em;
 
     h4 {
         font-weight: 700;
@@ -160,9 +197,8 @@ body {
         font-size: 30px;
     }
 
-
     @media (min-width: 768px) {
-        max-width: 300px;
+        max-width: none;
 
         h4 {
             font-weight: 700;
@@ -177,6 +213,18 @@ body {
     }
 }
 
+#verde{
+    border-right: $verde-claro 20px solid;
+}
+
+#verdeoscuro{
+    border-right: $verde-oscuro 20px solid;
+}
+
+#amarillo{
+    border-right: #F4D03F  20px solid;
+}
+
 // Last producto/usuario
 
 .div-last {
@@ -187,7 +235,7 @@ body {
         -20px -20px 27px #e7e7e7;
     margin: auto;
     margin-top: 4em;
-    max-width: 500px;
+    max-width: 300px;
 
     img {
         width: 80%;
@@ -208,13 +256,13 @@ body {
     }
 }
 
-// Flex content
 
 @media (min-width: 768px) {
 
     .flexcontent {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-around;
+        margin: auto;
         flex-direction: row;
     }
 
@@ -222,9 +270,12 @@ body {
         width: 100%;
         display: flex;
         justify-content: flex-start;
+    }
+}
 
-        div {
-            max-width: 50%;
-        }
+@media (min-width: 1024px) {
+    
+    .div-last{
+        max-width: 400px;
     }
 }
