@@ -14,6 +14,7 @@ function Productos() {
         <Last titulo="producto creado" nombre="Zapatos" otro="Talles: L" img="https://http2.mlstatic.com/D_NQ_NP_936729-MLA45213706383_032021-W.jpg" />
       </div>
       <table className="tablaproductos">
+        <thead>
         <tr>
           <th>Id</th>
           <th>Nombre</th>
@@ -21,7 +22,10 @@ function Productos() {
           <th>Categoria</th>
           <th>Precio</th>
         </tr>
-        <TableProducts id="1" nombre="Zapatos" talles="L, X" categoria="Hombres" precio="$2000" />
+        </thead>
+        <tbody>
+          <TableProducts id="1" nombre="Zapatos" talles="L, X" categoria="Hombres" precio="$2000" />
+        </tbody>
       </table>
     </div>
   )

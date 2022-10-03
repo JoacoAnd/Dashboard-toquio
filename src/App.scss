@@ -21,8 +21,8 @@ html,
 body {
     font-family: $roboto;
     background-color: $gris;
+    scroll-behavior: smooth;
 }
-
 
 // Top Bar
 
@@ -117,7 +117,7 @@ body {
             background-color: $beige;
         }
 
-        td{
+        td {
             padding-top: 1em;
             padding-bottom: 1em;
             background-color: $gris;
@@ -129,9 +129,9 @@ body {
         padding: 1em;
         border: 1px solid $gris-oscuro;
 
-        tr{
-            td{
-                    padding: 1em;
+        tr {
+            td {
+                padding: 1em;
             }
         }
     }
@@ -149,11 +149,12 @@ body {
             background-color: $beige;
         }
 
-        td{
+        td {
             padding: 1em 0 1em 0;
             background-color: $gris;
         }
-        .emailtd{
+
+        .emailtd {
             font-size: 10px;
         }
     }
@@ -163,12 +164,13 @@ body {
         padding: 1em;
         border: 1px solid $gris-oscuro;
 
-        tr{
-            td{
-                    padding: 1em;
+        tr {
+            td {
+                padding: 1em;
             }
-            .emailtd{
-                font-size:initial;
+
+            .emailtd {
+                font-size: initial;
             }
         }
     }
@@ -213,17 +215,32 @@ body {
     }
 }
 
-#verde{
+#verde {
     border-right: $verde-claro 20px solid;
 }
 
-#verdeoscuro{
+#verdeoscuro {
     border-right: $verde-oscuro 20px solid;
 }
 
-#amarillo{
-    border-right: #F4D03F  20px solid;
+#amarillo {
+    border-right: #F4D03F 20px solid;
 }
+
+#naranja {
+    border-right: #F39C12 20px solid;
+}
+
+#beige {
+    border-right:
+        #BEAC94 20px solid;
+}
+
+#azul {
+    border-right:
+        #2980B9 20px solid;
+}
+
 
 // Last producto/usuario
 
@@ -256,6 +273,107 @@ body {
     }
 }
 
+// Categorias
+
+div.categorias-div {
+    .cards-categorias {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .smallcard-div {
+            min-width: 200px;
+        }
+    }
+
+    .chart-pie-div {
+        margin: auto;
+        margin-top: 2em;
+        width: 90%;
+        background-color: $blanco;
+        padding: 2em;
+        border-radius: 20px;
+        box-shadow: 20px 20px 27px #d9d9d9,
+            -20px -20px 27px #e7e7e7;
+    }
+
+    @media (min-width: 768px) {
+
+        .cards-categorias {
+            .smallcard-div {
+                min-width: 250px;
+            }
+
+        }
+
+        .chart-pie-div {
+            width: 60%;
+        }
+    }
+
+    @media (min-width: 1024px) {
+
+        .cards-categorias {
+            .smallcard-div {
+                min-width: 300px;
+            }
+        }
+
+        .chart-pie-div {
+            width: 50%;
+        }
+    }
+}
+
+// Home
+
+div.home-div {
+    div.cards-home {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+
+        .smallcard-div {
+            width: 80%;
+        }
+    }
+
+    .last-chart-div {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+
+        .chart-pie-div {
+            margin-top: 4em;
+            width: 90%;
+            max-width: 300px;
+            background-color: $blanco;
+            padding: 2em;
+            border-radius: 20px;
+            box-shadow: 20px 20px 27px #d9d9d9,
+                -20px -20px 27px #e7e7e7;
+        }
+    }
+
+    @media (min-width: 800px) {
+        div.cards-home {
+            flex-wrap: nowrap;
+
+            .smallcard-div {
+                margin: 1em
+            }
+        }
+    }
+
+}
+
+.active{
+    color: $negro!important;
+    font-weight: 900!important;
+}
 
 @media (min-width: 768px) {
 
@@ -274,8 +392,8 @@ body {
 }
 
 @media (min-width: 1024px) {
-    
-    .div-last{
+
+    .div-last {
         max-width: 400px;
     }
 }
